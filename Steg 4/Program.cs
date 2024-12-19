@@ -18,22 +18,62 @@
 // System.Console.WriteLine(ThreeP);
 // System.Console.WriteLine(ThreeN);
 
+// System.Console.WriteLine("How many rock do you want to create?");
+// string Num = Console.ReadLine();
+// int Amount;
+// bool success = int.TryParse(Num, out Amount);
 
-System.Console.WriteLine("How many rock do you want to create?");
-string Num = Console.ReadLine();
-int Amount;
-bool success = int.TryParse(Num, out Amount);
+// for (int i = 0; i < Amount; i++)
+// {
+//    System.Console.WriteLine("Enter a weight for the rock");
+//    string input = Console.ReadLine();
+//    int Vikt;
+//    success = int.TryParse(input, out Vikt);
+//    Rock First = new(Vikt);
+//    Rock.Rocks.Add(First);
+// }
 
-for (int i = 0; i < Amount; i++)
+// Worker First = new Whitecollar("Anders", 50);
+// Worker Second = new BlueCollar("Teodora", 20);
+
+// int SecondA = Second.GetAge();
+// string SecondN = Second.GetName();
+// Second.SetWage();
+// int SecondW = Second.GetWage();
+
+// System.Console.WriteLine(SecondA);
+// System.Console.WriteLine(SecondN);
+// System.Console.WriteLine(SecondW);
+
+// int FirstA = First.GetAge();
+// string FirstN = First.GetName();
+// First.SetWage();
+// int FirstW = Second.GetWage();
+
+// System.Console.WriteLine(FirstA);
+// System.Console.WriteLine(FirstN);
+// System.Console.WriteLine(FirstW);
+
+
+System.Console.WriteLine("Vill du skapa en Processor, en Harddrive eller ett Graphics Card");
+String ans = Console.ReadLine();
+if (ans == "p")
 {
-   System.Console.WriteLine("Enter a weight for the rock");
-   string input = Console.ReadLine();
-   int Vikt;
-   success = int.TryParse(input, out Vikt);
-   Rock First = new(Vikt);
-   Rock.Rocks.Add(First);
+   Hardware First = new Processor("Processor", 1200, 4, 500);
+   Hardware.Hardwares.Add(First);
+}
+else if (ans == "h")
+{
+   Hardware Second = new Harddrive("Harddrive", 500, 256);
+   Hardware.Hardwares.Add(Second);
+}
+else if (ans == "g")
+{
+   Hardware Third = new Graphicscard("Graphics Card", 5000, 8, 500);
+   Hardware.Hardwares.Add(Third);
 }
 
+Hardware.DisplayList();
 
 
 Console.ReadLine();
